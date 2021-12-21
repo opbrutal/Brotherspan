@@ -856,60 +856,44 @@ def user_full_name(user):
     full_name = " ".join(names)
     return full_name
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.inviteall"))
-async def get_users(event):
-    sender = await event.get_sender()
-    me = await event.client.get_me()
-    if not sender.id == me.id:
-        hell = await eor(event, "`processing...`")
-    else:
-        hell = await eor(event, "`processing...`")
-    he_ll = event.pattern_match.group(1)
-    if he_ll == "@FIGHTERS_KA_ADDA":
-        return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@FIGHTERS_KA_ADDA":
-        return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@FIGHTERS_KA_ADDA":
-        return await hell.edit("Restricted to invite users from there.")
-    kraken = await get_chatinfo(event)
-    chat = await event.get_chat()
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
+import telethon
+from telethon import functions
+from userbot.utils import admin_cmd
+
+@bot.on(admin_cmd(pattern="scrap ?(.*)"))
+async def sed(event):
     if event.is_private:
-        return await hell.edit("`Sorry, Cant add users here`")
-    s = 0
-    f = 0
-    error = "None"
-
-    await hell.edit("**INVITING USERS !!**")
-    async for user in event.client.iter_participants(kraken.full_chat.id):
+        await event.edit("This Plugin Only Works In Groups Channel")
+        return
+    sed = event.pattern_match.group(1)
+    if str(sed).startswith("-100"):
+        kk = int(sed)
+    else:
+        kk = int(sed) if sed.isdigit() else str(sed)
+    user_s = 0
+    tries = 0
+    await event.edit("**Fetching Users !**")
+    async for user in event.client.iter_participants(kk):
+        await event.edit(f"**USER FIRST-NAME :  {user.first_name} USER ID :** {user.id}")
         try:
-            if error.startswith("Too"):
-                return await hell.edit(
-                    f"**INVITING FINISHED !**\n\n**Error :** \n`{error}`\n\n**Invited :**  `{s}` users. \n**Failed to Invite :** `{f}` users."
-                )
-            await event.client(
-                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
+            await bot(
+                functions.channels.InviteToChannelRequest(channel=event.chat_id, users=[user.id])
             )
-            s = s + 1
-            await hell.edit(
-                f"**INVITING USERS.. **\n\n**Invited :**  `{s}` users \n**Failed to Invite :**  `{f}` users.\n\n**×Error :**  `{error}`"
-            )
-        except Exception as e:
-            error = str(e)
-            f = f + 1
-    return await hell.edit(
-        f"**INVITING FINISHED** \n\n**Invited :**  `{s}` users \n**Failed :**  `{f}` users."
-    )
+            tries += 1
+        except:
+            user_s += 1
 
-
+    
 
 
 text = """ """
