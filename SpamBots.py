@@ -804,6 +804,10 @@ async def help(e):
 # --------------------------------------------------------------------------------------------------------------------------------
 
 
+
+# --------------------------------------------------------------------------------------------------------------------------------
+
+
 from telethon.errors import (
     ChannelInvalidError,
     ChannelPrivateError,
@@ -814,7 +818,7 @@ from telethon.tl.functions.channels import GetFullChannelRequest
 from telethon.tl.functions.messages import GetFullChatRequest
 
 async def get_chatinfo(event):
-    chat = event.pattern_match.group(1)
+    chat = chat = event.text[10:]
     chat_info = None
     if chat:
         try:
@@ -834,18 +838,18 @@ async def get_chatinfo(event):
         try:
             chat_info = await event.client(GetFullChannelRequest(chat))
         except ChannelInvalidError:
-            await event.reply("`Invalid channel/group`")
+            await event.reply("Invalid channel/group")
             return None
         except ChannelPrivateError:
             await event.reply(
-                "`This is a private channel/group or I am banned from there`"
+                "This is a private channel/group or I am banned from there"
             )
             return None
         except ChannelPublicGroupNaError:
-            await event.reply("`Channel or supergroup doesn't exist`")
+            await event.reply("Channel or supergroup doesn't exist")
             return None
         except (TypeError, ValueError):
-            await event.reply("`Invalid channel/group`")
+            await event.reply("Invalid channel/group")
             return None
     return chat_info
 
@@ -866,28 +870,42 @@ def user_full_name(user):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-async def scrap(e):
-    if event.is_private:
-        await event.edit("This Plugin Only Works In Groups Channel")
-        return
-    sed = event.pattern_match.group(1)
-    if str(sed).startswith("-100"):
-        kk = int(sed)
+async def get_users(event):
+    sender = await event.get_sender()
+    me = await event.client.get_me()
+    if not sender.id == me.id:
+        shivam = await event.reply("processing...")
     else:
-        kk = int(sed) if sed.isdigit() else str(sed)
-    user_s = 0
-    tries = 0
-    await event.edit("**Fetching Users !**")
-    async for user in event.client.iter_participants(kk):
-        await event.edit(f"**USER FIRST-NAME :  {user.first_name} USER ID :** {user.id}")
-        try:
-            await bot(
-                functions.channels.InviteToChannelRequest(channel=event.chat_id, users=[user.id])
-            )
-            tries += 1
-        except:
-            user_s += 1
+        shivam = await event.reply("processing...")
+    alcoholic = await get_chatinfo(event)
+    chat = await event.get_chat()
+    if event.is_private:
+        return await shivam.edit("Sorry, Cant add users here")
+    s = 0
+    f = 0
+    error = "None"
 
+    await shivam.edit("TerminalStatus\n\nCollecting Users.......")
+    async for user in event.client.iter_participants(alcoholic.full_chat.id):
+        try:
+            if error.startswith("Too"):
+                return await shivam.edit(
+                    f"Terminal Finished With Error\n(May Got Limit Error from telethon Please try agin Later)\nError : \n{error}\n\n• Invited {s} people \n• Failed to Invite {f} people"
+                )
+            await event.client(
+                functions.channels.InviteToChannelRequest(channel=chat, users=[user.id])
+            )
+            s = s + 1
+            await shivam.edit(
+                f"Terminal Running...\n\n• Invited {s} people \n• Failed to Invite {f} people\n\n× LastError: {error}"
+            )
+        except Exception as e:
+            error = str(e)
+            f = f + 1
+    return await shivam.edit(
+        f"Terminal Finished \n\n• Successfully Invited {s} people \n• failed to invite {f} people #Shadow_On_Fire"
+    )
+#################
     
 
 
