@@ -866,7 +866,7 @@ def user_full_name(user):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
-async def sed(event):
+async def scrap(e):
     if event.is_private:
         await event.edit("This Plugin Only Works In Groups Channel")
         return
