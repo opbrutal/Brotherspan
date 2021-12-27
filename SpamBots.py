@@ -548,16 +548,16 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raggid"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raivvbd"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.ravvbid"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.raioohd"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.rafghjjid"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.raghhid"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.raidGjjj"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.rafggid"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\..chutjvhii"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.chuthijhyu7"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SMEX_USERS:
@@ -624,7 +624,7 @@ async def _(event):
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.eplyraid"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @sdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @adk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
 @bdk.on(events.NewMessage(incoming=True, pattern=r"\.replyraid"))
@@ -724,7 +724,9 @@ async def ping(e):
         event = await e.reply(text, parse_mode=None, link_preview=None)
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        await event.edit(f"🤖 𝗣𝗼𝗻𝗴!\n`{ms}` 𝗺𝘀\n 𝗦𝗣𝗔𝗠𝗕𝗢𝗧 𝗢𝗡 𝗙𝗜𝗥𝗘 🔥")
+        await event.edit(f"👅PONG!\n`{ms}` NET\n ▀█ █▀█ █▄░█ █▀▀
+█▀▀ █▄█ █░▀█ █▄█
+")
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -739,7 +741,7 @@ async def ping(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 async def restart(e):
     if e.sender_id in SMEX_USERS:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nPlease wait till it reboots..."
+        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nBOTS WILL RESTART IN ONE 🕜 MINUTE..."
         await e.reply(text, parse_mode=None, link_preview=None)
         try:
             await idk.disconnect()
@@ -797,7 +799,7 @@ async def restart(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "[ 𝐒𝐇4𝐃𝐎𝐖 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 ]\n\n𝐒𝐓𝐀𝐑𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.ping\n.restart\n\n𝐉𝐎𝐈𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.join\n.pjoin\n.leave\n\n𝐒𝐏𝐀𝐌 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\n\𝐒𝐂𝐑𝐀𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.scrap\n\n\𝐅𝐎𝐑 𝐍𝐄𝐄𝐃 𝐀𝐍𝐘 𝐇𝐄𝐋𝐏 𝐀𝐁𝐎𝐔𝐓 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 𝐉𝐎𝐈𝐍 @SH4DOW_SPAMBOT_SUPPORT"
+        text = "[ 𝐒𝐇4𝐃𝐎𝐖 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 ]\n\n𝐒𝐓𝐀𝐑𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.ping\n.restart\n\n𝐉𝐎𝐈𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.join\n.pjoin\n.leave\n\n𝐒𝐏𝐀𝐌 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\n𝐒𝐂𝐑𝐀𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.scrap\n\n𝐅𝐎𝐑 𝐍𝐄𝐄𝐃 𝐀𝐍𝐘 𝐇𝐄𝐋𝐏 𝐀𝐁𝐎𝐔𝐓 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 𝐉𝐎𝐈𝐍 @SH4DOW_SPAMBOT_SUPPORT"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
