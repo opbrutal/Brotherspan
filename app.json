@@ -62,7 +62,7 @@
         "value": "",
         "required": false
       },
-        "STRING_10": {
+        "STRING10": {
         "description": "Bot String Session",
         "value": "",
         "required": false
