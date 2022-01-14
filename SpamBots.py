@@ -28,7 +28,7 @@ from Config import (
     STRING7,
     STRING8,
     STRING9,
-    STRING_10,
+    STRING10,
     SUDO,
 )
 from Utils import RAID, RRAID
@@ -44,7 +44,7 @@ sixth = STRING6
 seven = STRING7
 eight = STRING8
 ninth = STRING9
-tenth = STRING_10
+tenth = STRING10
 
 
 idk = ""
