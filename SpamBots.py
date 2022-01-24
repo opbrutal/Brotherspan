@@ -35,11 +35,11 @@ from Utils import RAID, RRAID
 
 a = API_ID
 b = API_HASH
-smex = STRING
-smexx = STRING2
-smexxx = STRING3
-smexxxx = STRING4
-smexxxxx = STRING5
+one = STRING
+two = STRING2
+three = STRING3
+four = STRING4
+five = STRING5
 sixth = STRING6
 seven = STRING7
 eight = STRING8
@@ -61,9 +61,9 @@ ddk = ""
 
 que = {}
 
-SMEX_USERS = [1904312233]
+GOD_USERS = [829943136]
 for x in SUDO:
-    SMEX_USERS.append(x)
+    GOD_USERS.append(x)
 
 
 async def start_Ustad():
@@ -77,8 +77,8 @@ async def start_Ustad():
     global cdk
     global ddk
     global edk
-    if smex:
-        session_name = str(smex)
+    if one:
+        session_name = str(one)
         print("String 1 Found")
         idk = TelegramClient(StringSession(session_name), a, b)
         try:
@@ -86,7 +86,7 @@ async def start_Ustad():
             await idk.start()
             botme = await idk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             idk = "smex"
             print(e)
@@ -99,8 +99,8 @@ async def start_Ustad():
         except Exception:
             pass
 
-    if smexx:
-        session_name = str(smexx)
+    if two:
+        session_name = str(two)
         print("String 2 Found")
         ydk = TelegramClient(StringSession(session_name), a, b)
         try:
@@ -108,7 +108,7 @@ async def start_Ustad():
             await ydk.start()
             botme = await ydk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -120,8 +120,8 @@ async def start_Ustad():
         except Exception:
             pass
 
-    if smexxx:
-        session_name = str(smexxx)
+    if three:
+        session_name = str(three)
         print("String 3 Found")
         wdk = TelegramClient(StringSession(session_name), a, b)
         try:
@@ -129,7 +129,7 @@ async def start_Ustad():
             await wdk.start()
             botme = await wdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -141,8 +141,8 @@ async def start_Ustad():
         except Exception:
             pass
 
-    if smexxxx:
-        session_name = str(smexxxx)
+    if four:
+        session_name = str(four)
         print("String 4 Found")
         hdk = TelegramClient(StringSession(session_name), a, b)
         try:
@@ -150,7 +150,7 @@ async def start_Ustad():
             await hdk.start()
             botme = await hdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -162,8 +162,8 @@ async def start_Ustad():
         except Exception:
             pass
 
-    if smexxxxx:
-        session_name = str(smexxxxx)
+    if five:
+        session_name = str(five)
         print("String 5 Found")
         sdk = TelegramClient(StringSession(session_name), a, b)
         try:
@@ -171,7 +171,7 @@ async def start_Ustad():
             await sdk.start()
             botme = await sdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -192,7 +192,7 @@ async def start_Ustad():
             await adk.start()
             botme = await adk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -213,7 +213,7 @@ async def start_Ustad():
             await bdk.start()
             botme = await bdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -234,7 +234,7 @@ async def start_Ustad():
             await cdk.start()
             botme = await cdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -255,7 +255,7 @@ async def start_Ustad():
             await ddk.start()
             botme = await ddk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -276,7 +276,7 @@ async def start_Ustad():
             await edk.start()
             botme = await edk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            SMEX_USERS.append(botid)
+            GOD_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -299,8 +299,8 @@ async def gifspam(e, smex):
             functions.messages.SaveGifRequest(
                 id=types.InputDocument(
                     id=sandy.media.document.id,
-                    access_hash=smex.media.document.access_hash,
-                    file_reference=smex.media.document.file_reference,
+                    access_hash=god.media.document.access_hash,
+                    file_reference=god.media.document.file_reference,
                 ),
                 unsave=True,
             )
@@ -321,7 +321,7 @@ async def gifspam(e, smex):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.join <Public Channel or Group Link/Username>"
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 6:
             bc = Ustad[0]
@@ -329,7 +329,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None)
             try:
                 await e.client(functions.channels.JoinChannelRequest(channel=bc))
-                await event.edit("ℂℍ𝔸𝕃𝕆 𝔾𝔸ℕ𝔻 𝕄𝔸ℝℕ𝔼 𝕁𝕆𝕀ℕ ℍ𝕆 𝔾𝔸𝕐𝔸")
+                await event.edit("𝙸𝚃𝚂 𝚂𝙷𝙾𝚆 𝚃𝙸𝙼𝙴 𝙱𝙰𝙱𝚈")
             except Exception as e:
                 await event.edit(str(e))
         else:
@@ -348,7 +348,7 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.pjoin <Private Channel or Group's access hash>\n\nExample :\nLink = https://t.me/joinchat/HGYs1wvsPUplMmM1\n\n.pjoin HGYs1wvsPUplMmM1"
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
             bc = Ustad[0]
@@ -356,7 +356,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None)
             try:
                 await e.client(ImportChatInviteRequest(bc))
-                await event.edit("ℙℝ𝕀𝕍𝔸𝕋𝔼 ℝ𝔸ℕ𝔻𝕀 🤤")
+                await event.edit("𝙿𝚁𝙸𝚅𝙰𝚃𝙴𝙻𝚈 𝚂𝙴𝙼𝚇")
             except Exception as e:
                 await event.edit(str(e))
         else:
