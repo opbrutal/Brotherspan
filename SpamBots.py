@@ -293,7 +293,7 @@ loop = asyncio.get_event_loop()
 loop.run_until_complete(start_Ustad())
 
 
-async def gifspam(e, smex):
+async def gifspam(e, god):
     try:
         await e.client(
             functions.messages.SaveGifRequest(
@@ -375,7 +375,7 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))        
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗟𝗲𝗮𝘃𝗲\n\nCommand:\n\n.leave <Channel or Chat ID>"
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         jatt = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
             bc = jatt[0]
@@ -384,7 +384,7 @@ async def _(e):
             event = await e.reply(text, parse_mode=None, link_preview=None )
             try:
                 await event.client(LeaveChannelRequest(bc))
-                await event.edit("𝔹𝔸ℍ𝕌𝕋 𝔾𝔸ℕ𝔻 𝕄𝔸ℝ𝕃𝕀 𝔾ℝ𝕆𝕌ℙ 𝕄𝔸𝕀  ℂℍ𝕆ℝℕ𝔼 𝕂𝔸 𝕋𝕀𝕄𝔼 𝔸𝔸 𝔾𝔸𝕐𝔸")
+                await event.edit("ᴋɪᴅs ᴋᴀ ʜᴏ ɢʏᴀ ʙᴀʟᴀᴛᴋᴀʀ ᴄʜʟᴏ")
             except Exception as e:
                 await event.edit(str(e))   
         else:
@@ -405,7 +405,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest as leave
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
 async def f(event):
-    if event.sender_id in SMEX_USERS:
+    if event.sender_id in GOD_USERS:
        async for x in idk.iter_dialogs():
          if x.is_group:
            await idk(leave(x.id))           
@@ -426,7 +426,7 @@ async def f(event):
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spam <count> <message to spam>\n\n.spam <count> <reply to a message>\n\nCount must be a integer."
     error = "Spam Module can only be used till 100 count. For bigger spams use BigSpam."
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -443,9 +443,9 @@ async def spam(e):
                 return await e.reply(error, parse_mode=None, link_preview=None)
             for _ in range(counter):
                 smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                await gifspam(e, smex)
+                await gifspam(e, god)
         elif e.reply_to_msg_id and smex.text:
-            message = smex.text
+            message = god.text
             counter = int(Ustad[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None)
@@ -466,7 +466,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗹𝗮𝘆𝗦𝗽𝗮𝗺\n\nCommand:\n\n.delayspam <sleep time> <count> <message to spam>\n\n.delayspam <sleep time> <count> <reply to a message>\n\nCount and Sleeptime must be a integer."
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         smex = await e.get_reply_message()
@@ -483,15 +483,15 @@ async def spam(e):
                     else:
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(sleeptime)
-        elif e.reply_to_msg_id and smex.media:
+        elif e.reply_to_msg_id and god.media:
             counter = int(Ustadsexy[0])
             sleeptime = float(Ustad[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                    await gifspam(e, smex)
+                    await gifspam(e, god)
                 await asyncio.sleep(sleeptime)
-        elif e.reply_to_msg_id and smex.text:
+        elif e.reply_to_msg_id and god.text:
             message = smex.text
             counter = int(Ustadsexy[0])
             sleeptime = float(Ustad[0])
@@ -515,7 +515,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -526,18 +526,18 @@ async def spam(e):
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     if e.reply_to_msg_id:
-                        await smex.reply(message)
+                        await god.reply(message)
                     else:
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(0.1)
-        elif e.reply_to_msg_id and smex.media:
+        elif e.reply_to_msg_id and god.media:
             counter = int(Ustad[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
                     smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                    await gifspam(e, smex)
+                    await gifspam(e, god)
                 await asyncio.sleep(0.1)
-        elif e.reply_to_msg_id and smex.text:
+        elif e.reply_to_msg_id and god.text:
             message = smex.text
             counter = int(Ustad[0])
             for _ in range(counter):
@@ -560,7 +560,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.chuthijhyu7"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -634,7 +634,7 @@ async def _(event):
 async def _(e):
     global que
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.replyraid <Username of User>\n\n.replyraid <reply to a User>"
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -657,7 +657,7 @@ async def _(e):
             qeue = que.get(g)
             appendable = [g]
             qeue.append(appendable)
-            text = "𝔸𝔹 𝔹𝕆𝕃 𝔹𝕊𝔻𝕂 𝕂𝔼"
+            text = "ᴀʙ ᴄʜᴜᴅᴇɢᴀ ᴛᴜ"
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
@@ -676,7 +676,7 @@ async def _(e):
 async def _(e):
     global que
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.dreplyraid <Username of User>\n\n.dreplyraid <reply to a User>"
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -718,13 +718,13 @@ async def _(e):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 async def ping(e):
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         start = datetime.now()
         text = "Pong!"
         event = await e.reply(text, parse_mode=None, link_preview=None)
         end = datetime.now()
         ms = (end - start).microseconds / 1000
-        await event.edit(f"🤤𝐆𝐀𝐍𝐃!\n`{ms}` ms\n⚔️𝗦𝗛4𝗗𝗢𝗪 𝗦𝗣𝗔𝗠𝗕𝗢𝗧⚔️")
+        await event.edit(f"ᴘᴏɴɢ!\n`{ms}` ms\n⚔️ᴋɪsᴋɪ ᴍᴀʀɴɪ ʜ ʙᴛᴀ ⚔️ʙʀᴏᴛʜᴇʀs ᴏᴘ⚔️")
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
@@ -739,7 +739,7 @@ async def ping(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.restart"))
 async def restart(e):
     if e.sender_id in SMEX_USERS:
-        text = "𝙍𝙚𝙨𝙩𝙖𝙧𝙩𝙚𝙙\n\nℝ𝕌𝕂 𝕄𝕌𝕋ℍ 𝕄𝔸ℝ𝕃𝕆 𝕋ℍ𝕆𝔻𝔸"
+        text = "Rᴇsᴛᴀʀᴛᴇᴅ\n\nᴋᴜᴄʜ ᴅᴇʀ sʜᴀʙᴀʀ ᴋʀ ʙᴀs"
         await e.reply(text, parse_mode=None, link_preview=None)
         try:
             await idk.disconnect()
@@ -797,7 +797,7 @@ async def restart(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "[ 𝐒𝐇4𝐃𝐎𝐖 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 ]\n\n𝐒𝐓𝐀𝐑𝐓 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.ping\n.restart\n\n𝐉𝐎𝐈𝐍 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.join\n.pjoin\n.leave\n\n𝐒𝐏𝐀𝐌 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\n𝐒𝐂𝐑𝐀𝐏 𝐂𝐎𝐌𝐌𝐀𝐍𝐃:\n.scrap\n\n𝐅𝐎𝐑 𝐍𝐄𝐄𝐃 𝐀𝐍𝐘 𝐇𝐄𝐋𝐏 𝐀𝐁𝐎𝐔𝐓 𝐒𝐏𝐀𝐌𝐁𝐎𝐓 𝐉𝐎𝐈𝐍 @SH4DOW_SPAMBOTSUPPORT"
+        text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\n ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
@@ -977,11 +977,11 @@ async def get_users(event):
     else:
         hell = await eor(event, "`processing...`")
     he_ll = event.pattern_match.group(1)
-    if he_ll == "@FIGHTERS_KA_ADDA":
+    if he_ll == "@THE_BROTHERS_GROUP":
         return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@FIGHTERS_KA_ADDA":
+    elif he_ll == "@THE_BROTHERS_GROUP":
         return await hell.edit("Restricted to invite users from there.")
-    elif he_ll == "@FIGHTERS_KA_ADDA":
+    elif he_ll == "@THE_BROTHERS_GROUP":
         return await hell.edit("Restricted to invite users from there.")
     kraken = await get_chatinfo(event)
     chat = await event.get_chat()
@@ -1018,7 +1018,7 @@ text = """ """
 print(text)
 print("")
 print(
-    "CONGRATULATIONS 🥳🥳..UR Spam Bots Ready to use"
+    "CONGO🥳🥳..BOT READY TO BANG"
 )
 if len(sys.argv) not in (1, 3, 4):
     try:
