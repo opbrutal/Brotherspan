@@ -514,7 +514,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.bigspam"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗕𝗶𝗴𝗦𝗽𝗮𝗺\n\nCommand:\n\n.bigspam <count> <message to spam>\n\n.bigspam <count> <reply to a message>\n\nCount must be a integer."
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -525,11 +525,11 @@ async def spam(e):
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "typing"):
                     if e.reply_to_msg_id:
-                        await god.reply(message)
+                        await smex.reply(message)
                     else:
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(0.1)
-        elif e.reply_to_msg_id and god.media:
+        elif e.reply_to_msg_id and smex.media:
             counter = int(Ustad[0])
             for _ in range(counter):
                 async with e.client.action(e.chat_id, "document"):
@@ -559,7 +559,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.chuthijhyu7"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SEMX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -633,7 +633,7 @@ async def _(event):
 async def _(e):
     global que
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.replyraid <Username of User>\n\n.replyraid <reply to a User>"
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -675,7 +675,7 @@ async def _(e):
 async def _(e):
     global que
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗮𝗰𝘁𝗶𝘃𝗮𝘁𝗲 𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱\n\nCommand:\n\n.dreplyraid <Username of User>\n\n.dreplyraid <reply to a User>"
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -717,7 +717,7 @@ async def _(e):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
 async def ping(e):
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         start = datetime.now()
         text = "Pong!"
         event = await e.reply(text, parse_mode=None, link_preview=None)
@@ -795,7 +795,7 @@ async def restart(e):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\n ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
         await e.reply(text, parse_mode=None, link_preview=None)
 
