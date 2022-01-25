@@ -796,7 +796,7 @@ async def restart(e):
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
-    if e.sender_id in SMEX_USERS:
+    if e.sender_id in GOD_USERS:
         text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\n ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
         await e.reply(text, parse_mode=None, link_preview=None)
 
