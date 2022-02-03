@@ -132,6 +132,10 @@ RAID = [
 ]
 
 
+GROUP = [ -1001579082062, -1001230166057, -1001286822812, -1001511274173, -1001686211366]
+
+
+
 PORMS = [
         "https://telegra.ph/file/9bcc076fd81dfe3feb291.mp4",
         "https://telegra.ph/file/b7a1a42429a65f64e67af.mp4",
