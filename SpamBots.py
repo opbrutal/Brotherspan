@@ -577,7 +577,7 @@ async def spam(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
-    if e.sender_id in SEMX_USERS:
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -752,7 +752,7 @@ async def pspam(e):
                          await gifspam(e, smex) 
                      await asyncio.sleep(0.4)
         else:
-            usage = f"**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: SEX SPAM** \n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: `.brother <count>`"
+            usage = f"**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: 𝗦𝗘𝗫 𝗦𝗣𝗔𝗠** \n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: `.brother <count>`"
             await e.reply(usage, parse_mode=None, link_preview=None )
 
 
@@ -849,7 +849,7 @@ async def restart(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\nʀᴀᴘᴇsᴛᴇʀ: \n.brother ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
+        text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\nʀᴀᴘᴇsᴛᴇʀ: \n.brother\n\n ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
