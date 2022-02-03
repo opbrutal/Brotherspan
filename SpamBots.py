@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 
 import telethon.utils
-from resources.content import RAID,PORMS
+from resources.content import GROUP,RAID,PORMS
 from telethon import TelegramClient, events
 from telethon.errors import (
     ChannelInvalidError,
@@ -32,7 +32,7 @@ from Config import (
     STRING10,
     SUDO,
 )
-from Utils import RAID, RRAID
+from Utils import RRAID
 
 a = API_ID
 b = API_HASH
@@ -549,16 +549,16 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raggid"))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raivvbd"))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.ravvbid"))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.raioohd"))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.rafghjjid"))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.raghhid"))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.raidGjjj"))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.rafggid"))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\..chutjvhii"))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.chuthijhyu7"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 async def spam(e):
     usage = "𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲 = 𝗥𝗮𝗶𝗱\n\nCommand:\n\n.raid <count> <Username of User>\n\n.raid <count> <reply to a User>\n\nCount must be a integer."
     if e.sender_id in SEMX_USERS:
@@ -706,6 +706,41 @@ async def _(e):
             await e.reply(text, parse_mode=None, link_preview=None)
         else:
             await e.reply(usage, parse_mode=None, link_preview=None)
+
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
+async def pspam(e):
+    if e.sender_id in SEMX_USERS:
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None)
+        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        if len(Ustad) == 1:
+            counter = int(Ustad[0])
+            if int(e.chat_id) in GROUP:
+                text = f"🥵ᴛʜɪs ɪs ᴜʀ ғᴀᴛʜᴇʀ ɢʀᴘ..ʏʜᴀ ɴʜɪ ʜᴏɢᴀ"
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                 porrn = random.choice(PORMS)
+                 for _ in range(counter):
+                     async with e.client.action(e.chat_id, "document"):
+                         smex = await e.client.send_file(e.chat_id, porrn)
+                         await gifspam(e, smex) 
+                     await asyncio.sleep(0.4)
+        else:
+            usage = f"**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲: SEX SPAM** \n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: `.brother <count>`"
+            await e.reply(usage, parse_mode=None, link_preview=None )
+
+
+
 
 
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.ping"))
