@@ -734,8 +734,8 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
-async def spam(e):
-    if e.sender_id in SEMX_USERS:
+async def pspam(e):
+    if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
         Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
