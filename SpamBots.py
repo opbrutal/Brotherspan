@@ -5,6 +5,7 @@ import sys
 from datetime import datetime
 
 import telethon.utils
+from resources.content import RAID,PORMS
 from telethon import TelegramClient, events
 from telethon.errors import (
     ChannelInvalidError,
