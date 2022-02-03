@@ -734,7 +734,7 @@ async def _(e):
 @cdk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
 @edk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.brother"))
-async def pspam(e):
+async def spam(e):
     if e.sender_id in SEMX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None)
@@ -849,7 +849,7 @@ async def restart(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.help"))
 async def help(e):
     if e.sender_id in SMEX_USERS:
-        text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\n ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
+        text = "[ Bʀᴏᴛʜᴇʀs ᴏᴘ ]\n\nsᴛᴀʀᴛ ᴄᴍᴅs:\n.ping\n.restart\n\nᴊᴏɪɴɪɴɢ:\n.join\n.pjoin\n.leave\n\nsᴘᴀᴍᴍɪɴɢ:\n.spam\n.delayspam\n.bigspam\n.replyraid\n.dreplyraid\n\nᴋɪᴅɴᴀᴘᴘɪɴɢ:\n.scrap\n\nʀᴀᴘᴇsᴛᴇʀ: \n.brother ғᴏʀ MORE INFO @THE_BROTHERS_GROUP"
         await e.reply(text, parse_mode=None, link_preview=None)
 
 
