@@ -970,7 +970,7 @@ async def _(e):
                 text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) in SUDO_USERS:
-                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒.""
+                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
                 message = str(bros[0])
