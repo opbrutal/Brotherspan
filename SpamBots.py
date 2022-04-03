@@ -930,16 +930,16 @@ def user_full_name(user):
 
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.dm))
 async def _(e):   
     usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dm <username> <massage> \n .dm <reply to the use> <massage>"
     if e.sender_id in SUDO_USERS:
@@ -982,16 +982,16 @@ async def _(e):
              await e.reply(usage)
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid))
 async def dmraid(e):
     usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM RAID**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dmraid <count> <username> \n .dmraid <reply to the use> <massage>"
     if e.sender_id in SUDO_USERS:
