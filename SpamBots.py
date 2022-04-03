@@ -930,16 +930,16 @@ def user_full_name(user):
 
 
 
-@idk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@wdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@hdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@sdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@adk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@bdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@cdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@edk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
-@ddk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.sdm))
 async def _(e):   
     usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dm <username> <massage> \n .dm <reply to the use> <massage>"
     if e.sender_id in SUDO_USERS:
