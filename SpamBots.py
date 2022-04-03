@@ -587,12 +587,12 @@ async def spam(e):
             a = await e.client.get_entity(user)
             g = a.id
             if int(g) in Deadly:
-                text = f"I can't raid on @deadly_spam_bot's Owner"
+                text = f"ʟᴏʟ ɪ ᴄᴀɴᴛ ᴀʙᴜsᴇ ᴍʏ ɢᴏᴅ✌️🤭"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == SMEX_USERS:
                 text = f"ᴀʙᴇ ʙᴏᴛ ɢᴏᴅ ʜ ᴋʏᴀ ʙᴀᴋᴄ ᴋʀʀᴀ ᴛᴜ😎."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in SUDO:
                 text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -612,7 +612,7 @@ async def spam(e):
             if int(g) in SMEX_USERS:
                 text = f"ᴀʙᴇ ʙᴏᴛ ɢᴏᴅ ʜ ᴋʏᴀ ʙᴀᴋᴄ ᴋʀʀᴀ ᴛᴜ😎.."
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in SUDO:
                 text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
