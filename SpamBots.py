@@ -565,7 +565,7 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+ idk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
@@ -580,53 +580,39 @@ async def spam(e):
     if e.sender_id in SMEX_USERS:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
-        Ustad = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
-        bitxh = await e.get_reply_message()
-        if len(Ustad) == 2:
-            user = str(Ustad[1])
-            a = await e.client.get_entity(user)
+        bros = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        smex = await e.get_reply_message()
+        if len(bros) == 2:
+            message = str(bros[1])
+            print(message)
+            a = await e.client.get_entity(message)
             g = a.id
-            if int(g) in Ustad:
-                text = f"ʟᴏʟ ɪ ᴄᴀɴᴛ ᴀʙᴜsᴇ ᴍʏ ɢᴏᴅ✌️🤭"
-                await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) == SMEX_USERS:
-                text = f"ᴀʙᴇ ʙᴏᴛ ɢᴏᴅ ʜ ᴋʏᴀ ʙᴀᴋᴄ ᴋʀʀᴀ ᴛᴜ😎."
-                await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO:
-                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
-                await e.reply(text, parse_mode=None, link_preview=None )
-            else:
-                c = a.first_name
-                username = f"[{c}](tg://user?id={g})"
-                counter = int(Ustad[0])
-                for _ in range(counter):
-                    reply = random.choice(RAID)
-                    caption = f"{username} {reply}"
-                    async with e.client.action(e.chat_id, "typing"):
-                        await e.client.send_message(e.chat_id, caption)
-                        await asyncio.sleep(0.5)
+            c = a.first_name
+            username = f"[{c}](tg://user?id={g})"
+            counter = int(bros[0])
+            for _ in range(counter):
+                reply = random.choice(RAID)
+                caption = f"{username} {reply}"
+                async with e.client.action(e.chat_id, "typing"):
+                    await e.client.send_message(e.chat_id, caption)
+                    await asyncio.sleep(0.3)
         elif e.reply_to_msg_id:             
             a = await e.get_reply_message()
             b = await e.client.get_entity(a.sender_id)
             g = b.id
-            if int(g) in SMEX_USERS:
-                text = f"ᴀʙᴇ ʙᴏᴛ ɢᴏᴅ ʜ ᴋʏᴀ ʙᴀᴋᴄ ᴋʀʀᴀ ᴛᴜ😎.."
-                await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO:
-                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
-                await e.reply(text, parse_mode=None, link_preview=None )
-            else:
-                c = b.first_name
-                counter = int(Ustad[0])
-                username = f"[{c}](tg://user?id={g})"
-                for _ in range(counter):
-                    reply = random.choice(RAID)
-                    caption = f"{username} {reply}"
-                    async with e.client.action(e.chat_id, "typing"):
-                        await e.client.send_message(e.chat_id, caption)
-                        await asyncio.sleep(0.3)
+            c = b.first_name
+            counter = int(bros[0])
+            username = f"[{c}](tg://user?id={g})"
+            for _ in range(counter):
+                reply = random.choice(RAID)
+                caption = f"{username} {reply}"
+                async with e.client.action(e.chat_id, "typing"):
+                    await e.client.send_message(e.chat_id, caption)
+                    await asyncio.sleep(0.3)
         else:
-            await e.reply(usage)
+            await e.reply(usage, parse_mode=None, link_preview=None )
+
+                
 
 
 @idk.on(events.NewMessage(incoming=True))
