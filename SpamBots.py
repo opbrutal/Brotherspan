@@ -565,7 +565,7 @@ async def spam(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
- idk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
 @hdk.on(events.NewMessage(incoming=True, pattern=r"\.raid"))
