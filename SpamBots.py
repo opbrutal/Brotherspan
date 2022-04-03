@@ -942,7 +942,7 @@ def user_full_name(user):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.dm"))
 async def _(e):   
     usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dm <username> <massage> \n .dm <reply to the use> <massage>"
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id in SUDO:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         bros = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -954,7 +954,7 @@ async def _(e):
             if int(g) in SMEX_USERS:
                 text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in SUDO:
                 text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:            
@@ -969,7 +969,7 @@ async def _(e):
             if int(g) in SMEX_USERS:
                 text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in SUDO:
                 text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -994,7 +994,7 @@ async def _(e):
 @ddk.on(events.NewMessage(incoming=True, pattern=r"\.dmraid"))
 async def dmraid(e):
     usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM RAID**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dmraid <count> <username> \n .dmraid <reply to the use> <massage>"
-    if e.sender_id in SUDO_USERS:
+    if e.sender_id in SUDO:
         if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
             return await e.reply(usage, parse_mode=None, link_preview=None )
         bros = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
@@ -1006,7 +1006,7 @@ async def dmraid(e):
             if int(g) in SMEX_USERS:
                 text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in SUDO:
                 text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
@@ -1025,7 +1025,7 @@ async def dmraid(e):
             if int(g) in SMEX_USERS:
                 text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
                 await e.reply(text, parse_mode=None, link_preview=None )
-            elif int(g) in SUDO_USERS:
+            elif int(g) in SUDO:
                 text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
                 await e.reply(text, parse_mode=None, link_preview=None )
             else:
