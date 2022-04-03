@@ -586,7 +586,7 @@ async def spam(e):
             user = str(Ustad[1])
             a = await e.client.get_entity(user)
             g = a.id
-            if int(g) in Deadly:
+            if int(g) in Ustad:
                 text = f"ʟᴏʟ ɪ ᴄᴀɴᴛ ᴀʙᴜsᴇ ᴍʏ ɢᴏᴅ✌️🤭"
                 await e.reply(text, parse_mode=None, link_preview=None )
             elif int(g) == SMEX_USERS:
