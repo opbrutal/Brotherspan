@@ -928,6 +928,118 @@ def user_full_name(user):
     full_name = " ".join(names)
     return full_name
 
+
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\%sdm(?: |$)(.*)" % hl))
+async def _(e):   
+    usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dm <username> <massage> \n .dm <reply to the use> <massage>"
+    if e.sender_id in SUDO_USERS:
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None )
+        bros = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        smex = await e.get_reply_message()
+        if len(bros) == 2:
+            user = str(bros[0])
+            a = await e.client.get_entity(user)
+            g = a.id
+            if int(g) in SMEX_USERS:
+                text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif int(g) in SUDO_USERS:
+                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:            
+                 message = str(bros[1])
+                 await e.reply("🔸Message Delivered🔸")
+                 await e.client.send_message(g, message)
+                 await asyncio.sleep(0.3)
+        elif e.reply_to_msg_id:             
+            a = await e.get_reply_message()
+            b = await e.client.get_entity(a.sender_id)
+            g = b.id
+            if int(g) in SMEX_USERS:
+                text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif int(g) in SUDO_USERS:
+                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒.""
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                message = str(bros[0])
+                await e.reply("🔸 Message Delivered 🔸")
+                await e.client.send_message(g, message)
+                await asyncio.sleep(0.3)
+
+        else:
+             await e.reply(usage)
+
+
+@idk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@ydk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@wdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@hdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@sdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@adk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@bdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@cdk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@edk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+@ddk.on(events.NewMessage(incoming=True, pattern=r"\.sdmraid))
+async def dmraid(e):
+    usage = "**𝗠𝗼𝗱𝘂𝗹𝗲 𝗡𝗮𝗺𝗲** : **DM RAID**\n\n 𝗖𝗼𝗺𝗺𝗮𝗻𝗱: \n\n .dmraid <count> <username> \n .dmraid <reply to the use> <massage>"
+    if e.sender_id in SUDO_USERS:
+        if e.text[0].isalpha() and e.text[0] in ("/", "#", "@", "!"):
+            return await e.reply(usage, parse_mode=None, link_preview=None )
+        bros = ("".join(e.text.split(maxsplit=1)[1:])).split(" ", 1)
+        bitxh = await e.get_reply_message()
+        if len(bros) == 2:
+            user = str(bros[1])
+            a = await e.client.get_entity(user)
+            g = a.id
+            if int(g) in SMEX_USERS:
+                text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif int(g) in SUDO_USERS:
+                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                counter = int(bros[0])
+                await e.reply("⚜ ᴅᴍ ᴄʜᴜᴅᴀɪ sᴛᴀʀᴛ🔥😈")
+                for _ in range(counter):
+                    reply = random.choice(RAID)
+                    caption = f"{reply}"
+                    async with e.client.action(g, "typing"):
+                        await e.client.send_message(g, caption)
+                        await asyncio.sleep(0.4)
+        elif e.reply_to_msg_id:             
+            a = await e.get_reply_message()
+            b = await e.client.get_entity(a.sender_id)
+            g = b.id
+            if int(g) in SMEX_USERS:
+                text = f"ɪᴛs ʏᴏᴜʀ ᴅᴀᴅ ᴅᴏɴᴛ ᴛʀʏ ᴛᴏ sᴘᴀᴍ ᴏɴ ʜɪᴍ👅"
+                await e.reply(text, parse_mode=None, link_preview=None )
+            elif int(g) in SUDO_USERS:
+                text = f"ᴄʜᴜᴛɪʏᴇ ᴀᴘɴᴇ ʙᴏᴛ ᴍᴇ ᴘᴀʀᴛɴᴇʀ ʜ😒."
+                await e.reply(text, parse_mode=None, link_preview=None )
+            else:
+                counter = int(bros[0])
+                await e.reply("⚜ ᴅᴍ ᴄʜᴜᴅᴀɪ sᴛᴀʀᴛ🔥😈")
+                for _ in range(counter):
+                    reply = random.choice(RAID)
+                    caption = f"{reply}"
+                    async with e.client.action(g, "typing"):
+                        await e.client.send_message(g, caption)
+                        await asyncio.sleep(0.3)
+        else:
+            await e.reply(usage)
+
 @idk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
 @ydk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
 @wdk.on(events.NewMessage(incoming=True, pattern=r"\.scrap"))
